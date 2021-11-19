@@ -38,6 +38,17 @@ const questions = [
       type: 'input',
       message: 'What are the test instructions?',
       name: 'testing',
+    },
+    {
+      type: 'list',
+      message: 'Which license do you want to provide for your project?',
+      choices: ['MIT', 'Apache', 'BSD'],
+      name: 'license',
+    },
+    {
+      type: 'input',
+      message: 'Name under which license will be held?',
+      name: 'holder',
     },  
 ]   
 
