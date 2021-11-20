@@ -96,7 +96,7 @@ ${data.testing}
   
 // Write generated template into README.  
 const writeTemplate = (template) => {
-fs.writeFile("./generate-me/README.md", template, (error) => 
+fs.writeFile("./generated-readme/README.md", template, (error) => 
 error ? console.error(error) : console.info('README generated!'));  
 };
 

@@ -6,11 +6,10 @@
 - [Installation Instructions](#installation-instructions)
 - [Usage Information](#usage-information)
 - [Contribution Guidelines](#contribution-guidelines)
-- [Testing Instructions](#testing-instructions)
 
 <a name='project-description'></a> 
 ## Project description
-This project consists of an automatic README generator. It can be called from the command line and uses Inquirer to prompt questions. As the user answers questions, the section for the readme are generated and then written into a new .md file. If questions are omitted, then the correspoding section is left out. Also, licensing is provided for (MIT, Apache and BSD). 
+This project consists of an automatic README generator. It can be called from the command line and uses Inquirer to prompt questions. As the user answers questions, the section for the readme are generated and then written into a new .md file. If questions are omitted, then the correspoding section is left out. Also, licensing is provided for (MIT, Apache and BSD). This README file has been generated with Generate-me. 
 
 <a name='installation-instructions'></a>
 ## Installation Instructions
