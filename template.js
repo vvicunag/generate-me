@@ -5,7 +5,8 @@ const licenseText = require("./licenses")
 const generateTemplate = (data) => {
     // Basis for the README 
     let template = 
-    "# " + data.projectName + " - a Project by " + data.username +"\n"
+    "# " + data.projectName + " - a Project by " + `[${data.username}](http://github.com/${data.username})` +"\n";
+    // Adds license badge, according to selected option
     if(data.license === "MIT") {
         template = template + "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n";
     }
@@ -13,7 +14,7 @@ const generateTemplate = (data) => {
         template = template + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n";
     }
     else {
-        template = template + "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause\n";
+        template = template + "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n";
     }
     template = template + "\n## Table of Contents\n";
     // Adds table of contents elements, if corresponding section is provided  
@@ -33,7 +34,7 @@ const generateTemplate = (data) => {
         template = template + 
 `- [Contribution Guidelines](#contribution-guidelines)
 `   };
-    if(data.description != "") {
+    if(data.testing != "") {
         template = template + 
 `- [Testing Instructions](#testing-instructions)
 `   };
@@ -80,7 +81,7 @@ ${data.testing}
 `   };
     template = template + 
     // Adds copyright info and corresponding license
-    "\nCopyright " + moment().format("YYYY")+ ", " + data.holder + "\n";
+    "\n---\nCopyright " + moment().format("YYYY")+ ", " + data.holder + ".\n";
     if(data.license === "MIT") {
         template = template + licenseText.MIT;
     }

@@ -6,7 +6,7 @@ const generateTemplate = require("./template");
 const questions = [
     {
       type: 'input',
-      message: 'What is your user name?',
+      message: 'What is your GitHub user name?',
       name: 'username',
     },
     {
